@@ -7,14 +7,14 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import storage
 
-cred = credentials.Certificate("k.json")
+cred = credentials.Certificate("YOUR FIREBASE API-KEY")
 firebase_admin.initialize_app(cred, {
-    'storageBucket': "crack-celerity-393115.appspot.com"
+    'storageBucket': "YOUR STORAGE BUCKET URL"
 })
 
 
-# gc = gspread.service_account(filename="key.json")
-# wks = gc.open("Attendance_Data").sheet1
+# gc = gspread.service_account(filename="GSPREAD API-KEY")
+# wks = gc.open("YOUR FILE NAME").sheet1
 
 folder = 'images'
 pathlist = os.listdir(folder)
