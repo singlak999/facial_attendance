@@ -2,16 +2,16 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
 
-cred = credentials.Certificate("k.json")
+cred = credentials.Certificate("FIREBASE API-KEY")
 firebase_admin.initialize_app(cred, {
-    'databaseURL': "https://crack-celerity-393115-default-rtdb.firebaseio.com/"
+    'databaseURL': "FIREBASE DATABASE URL"
 })
 
 ref = db.reference("Students")
 data = {
-    "21BCE8114":
+    "REGESTRATION NUMBER":
         {
-            "Name": "Krishna"
+            "Name": "NAME"
         }
 }
 for key,values in data.items():
