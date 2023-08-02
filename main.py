@@ -8,9 +8,9 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
 
-cred = credentials.Certificate("k.json")
+cred = credentials.Certificate("FIREBASE API-KEY")
 firebase_admin.initialize_app(cred, {
-    'databaseURL': "https://crack-celerity-393115-default-rtdb.firebaseio.com/"
+    'databaseURL': "DATABASE URL"
 })
 
 ref = db.reference("Students")
@@ -23,8 +23,8 @@ file = open('EncodeFile.p', 'rb')
 elkID = pickle.load(file)
 file.close()
 elk, ID = elkID
-# gc = gspread.service_account(filename="key.json")
-# wks = gc.open("Attendance_Data").sheet1
+# gc = gspread.service_account(filename="GSPREAD API-KEY")
+# wks = gc.open("FILE NAME").sheet1
 while True:
     success, img = cap.read()
     img_compressed = cv2.resize(img, (0, 0), None, 0.25, 0.25)
